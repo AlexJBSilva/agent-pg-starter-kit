@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { parseFrontmatter } from './frontmatter';
-import { extractFileName } from './utils';
-import { Rule } from '../types';
+import { parseFrontmatter } from './frontmatter.js';
+import { extractFileName } from './utils.js';
+import { Rule } from '../types/index.js';
 import { v4 as uuidv4 } from 'uuid';
 
 export const parseRuleFile = (filePath: string): Rule | null => {

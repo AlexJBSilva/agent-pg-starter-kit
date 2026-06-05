@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
-import { query } from '../../db/connection';
-import { asyncHandler, AppError } from '../middleware/error';
+import { query } from '../../db/connection.js';
+import { asyncHandler, AppError } from '../middleware/error.js';
 
 const router = Router();
 

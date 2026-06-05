@@ -1,10 +1,11 @@
 import * as path from 'path';
-import { query } from '../db/connection';
-import { loadPersonasFromDirectory } from '../parser/personas';
-import { loadRulesFromDirectory } from '../parser/rules';
-import { loadSkillsFromDirectory } from '../parser/skills';
-import { generateHash } from '../parser/utils';
-import { Persona, Rule, Skill } from '../types';
+import { query } from '../db/connection.js';
+import { loadPersonasFromDirectory } from '../parser/personas.js';
+import { loadRulesFromDirectory } from '../parser/rules.js';
+import { loadSkillsFromDirectory } from '../parser/skills.js';
+import { generateHash } from '../parser/utils.js';
+import { fileURLToPath } from 'url';
+import { Persona, Rule, Skill } from '../types/index.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -217,7 +218,7 @@ const logSync = async (
 };
 
 // CLI execution
-if (require.main === module) {
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
   syncFramework()
     .then(() => {
       console.log('Sync completed successfully');
