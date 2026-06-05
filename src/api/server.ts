@@ -1,10 +1,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { errorHandler } from './middleware/error';
-import personasRouter from './routes/personas';
-import rulesRouter from './routes/rules';
-import skillsRouter from './routes/skills';
-import { syncFramework } from '../sync/index';
+import { errorHandler } from './middleware/error.js';
+import personasRouter from './routes/personas.js';
+import rulesRouter from './routes/rules.js';
+import skillsRouter from './routes/skills.js';
+import { syncFramework } from '../sync/index.js';
 
 dotenv.config();
 

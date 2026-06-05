@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { parseFrontmatter } from './frontmatter';
-import { generateHash, extractFileName } from './utils';
-import { Persona } from '../types';
+import { parseFrontmatter } from './frontmatter.js';
+import { generateHash, extractFileName } from './utils.js';
+import { Persona } from '../types/index.js';
 import { v4 as uuidv4 } from 'uuid';
 
 export const parsePersonaFile = (filePath: string): Persona | null => {
